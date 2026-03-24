@@ -13,14 +13,15 @@ That being said, the nginx server was installed using the apt utility.
 `sudo apt install nginx` (You can likely use dnf in a similar fashion on RH-based distros)
 The configuration file for nginx is `/etc/nginx/nginx.conf`
 Under the http directive I added the following server block directive:
-`
-server {
-    listen  127.0.0.1:80;
-    server_name localhost;
-    location / {
-       root /var/www/html; 
-    }
-}
+
+>server {
+>    listen  127.0.0.1:80;
+>    server_name localhost;
+>    location / {
+>       root /var/www/html; 
+>    }
+>}
+
 `
 This directive sets up a listener on the local machine using port 80.
 (Remember that utilizing port 80 will require elevated privileges running
